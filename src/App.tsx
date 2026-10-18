@@ -90,7 +90,7 @@ function RevenuePreview() {
   );
 }
 
-function ProjectVisual({ project }) {
+function ProjectVisual({ project }: { project: (typeof projects)[number] }) {
   const [failed, setFailed] = useState(false);
   if (project.number === '03') return <RevenuePreview />;
   return (
@@ -173,7 +173,7 @@ export default function App() {
               <article className={'project project-' + project.number} key={project.number} data-reveal>
                 <div className="project-visual"><ProjectVisual project={project} /><span className="project-index-large">{project.number}</span></div>
                 <div className="project-copy">
-                  <div className="project-meta"><span>{project.type}</span><span>0{project.number === '03' ? '3' : project.number}</span></div>
+                  <div className="project-meta"><span>{project.type}</span><span>{project.number}</span></div>
                   <h3>{project.name}</h3>
                   <p>{project.description}</p>
                   <div className="project-role"><span>MY FOCUS</span><b>{project.role}</b></div>
@@ -219,7 +219,7 @@ export default function App() {
 
         <section className="contact-section section-pad" id="contact">
           <div className="contact-top"><span>HAVE AN OPPORTUNITY OR A GOOD PROBLEM?</span><span>05 / CONTACT</span></div>
-          <div className="contact-main"><div><p className="section-number">LET’S CONNECT</p><h2>Let’s build<br /><em>something useful.</em></h2></div><div className="contact-copy"><p>I’m open to internships, collaboration and opportunities to learn from people working with data and technology.</p><a className="contact-button" href="mailto:bentiger255@gmail.com?subject=Portfolio%20enquiry">SEND ME A MESSAGE <span>↗</span></a><div className="social-row"><a href="mailto:bentiger255@gmail.com">EMAIL ↗</a><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div></div></div>
+          <div className="contact-main"><div><p className="section-number">LET’S CONNECT</p><h2>Let’s build<br /><em>something useful.</em></h2></div><div className="contact-copy"><p>I’m open to internships, collaboration and opportunities to learn from people working with data and technology.</p><a className="contact-button" href="mailto:bentiger255@gmail.com?subject=Portfolio%20enquiry">SEND ME A MESSAGE <span>↗</span></a><div className="social-row"><a href="mailto:bentiger255@gmail.com">EMAIL ↗</a><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GITHUB ↗</a></div></div></div>
           <div className="contact-bottom"><span>BENJAMIN GEORGE MBEGA</span><span>DAR ES SALAAM, TANZANIA</span><a href="#home">BACK TO TOP ↑</a></div>
         </section>
       </main>
