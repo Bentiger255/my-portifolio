@@ -1,0 +1,1 @@
+User-agent: *\nAllow: /\nSitemap: https://benjamin.kesug.com/sitemap.xml\n

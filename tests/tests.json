@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Explore projects and filter the portfolio",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "portfolio navigation",
+      "project listing",
+      "project category filtering",
+      "external repository links"
+    ],
+    "description": "Verifies a visitor can reach projects, filter the list and open a repository link.",
+    "steps": [
+      "Open the portfolio home page",
+      "Navigate to Projects",
+      "Select the Software filter and then All"
+    ],
+    "expected": "The project list updates to match the selected filter, and project repository links are available."
+  },
+  {
+    "name": "Use the navigation on a mobile screen",
+    "viewport": "mobile",
+    "covers": [
+      "responsive layout",
+      "mobile navigation open and close",
+      "anchor navigation"
+    ],
+    "description": "Verifies the navigation menu works on mobile and selecting a section closes the menu.",
+    "steps": [
+      "Open the portfolio at a mobile viewport",
+      "Open the navigation menu",
+      "Select About"
+    ],
+    "expected": "The mobile navigation is displayed, About is reached, and the menu closes."
+  },
+  {
+    "name": "Contact the portfolio owner",
+    "viewport": "desktop",
+    "covers": [
+      "contact information",
+      "email contact action",
+      "social profile links"
+    ],
+    "description": "Verifies the contact section provides usable email and profile links.",
+    "steps": ["Navigate to Contact", "Activate Start a conversation"],
+    "expected": "The browser opens an email compose action addressed to bentiger255@gmail.com."
+  },
+  {
+    "name": "Open legal information and skip repeated navigation",
+    "viewport": "mobile",
+    "covers": ["privacy policy page", "terms page", "skip link accessibility"],
+    "description": "Verifies legal pages are reachable and keyboard users can bypass repeated navigation.",
+    "steps": [
+      "Open the portfolio at a mobile viewport",
+      "Activate Skip to content using keyboard navigation",
+      "Open Privacy from the footer and then open Terms"
+    ],
+    "expected": "The main content receives focus, and both legal pages load with responsive readable content."
+  }
+]
