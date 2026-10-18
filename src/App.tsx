@@ -4,113 +4,101 @@ const projects = [
   {
     number: '01',
     name: 'Samia Mikopo Tanzania',
-    category: 'Public-facing digital service',
-    description: 'A loan application website with a connected administrative workflow for reviewing submissions and managing application information.',
-    contribution: 'Website, application flow and admin experience',
+    type: 'DIGITAL SERVICE',
+    description: 'A public-facing loan application experience with an administrative workflow for reviewing submissions and managing application information.',
+    role: 'Website, application flow and admin experience',
     stack: ['HTML', 'CSS', 'JavaScript', 'Supabase'],
-    repository: 'https://github.com/Bentiger255/samia-mikopo-tanzania',
     live: 'https://samia-mikopo.com',
+    repo: 'https://github.com/Bentiger255/samia-mikopo-tanzania',
     image: 'https://image.thum.io/get/width/1400/crop/900/noanimate/https://samia-mikopo.com',
-    imageAlt: 'Screenshot preview of the Samia Mikopo Tanzania website',
-    visual: 'website'
+    alt: 'Live website preview of Samia Mikopo Tanzania'
   },
   {
     number: '02',
     name: 'Tiger QR Studio',
-    category: 'Web application',
-    description: 'A QR code tool for creating, customising and organising codes, with reusable templates and a personal library.',
-    contribution: 'Interface, application workflow and product structure',
+    type: 'WEB APPLICATION',
+    description: 'A QR code workspace for creating and organising codes, with templates and a personal library built around a practical workflow.',
+    role: 'Interface design, application workflow and product structure',
     stack: ['React', 'Vite', 'CSS'],
-    repository: 'https://github.com/Bentiger255/tiger-qr-studio',
     live: 'https://brilliant-dasik-af7c22.netlify.app',
+    repo: 'https://github.com/Bentiger255/tiger-qr-studio',
     image: 'https://image.thum.io/get/width/1400/crop/900/noanimate/https://brilliant-dasik-af7c22.netlify.app',
-    imageAlt: 'Screenshot preview of the Tiger QR Studio application',
-    visual: 'website'
+    alt: 'Live website preview of Tiger QR Studio'
   },
   {
     number: '03',
-    name: 'Municipal Revenue Analysis',
-    category: 'Field practical training',
-    description: 'Worked with municipal revenue records, using SQL to extract January to August 2026 data and Excel to prepare it for analysis.',
-    contribution: 'SQL data extraction and Excel workflow',
+    name: 'Municipal revenue analysis',
+    type: 'FIELD PRACTICAL TRAINING',
+    description: 'Extracted municipal revenue records for January to August 2026 with SQL and prepared the data in Excel for further analysis.',
+    role: 'SQL extraction and spreadsheet preparation',
     stack: ['SQL', 'Excel', 'Data preparation'],
-    repository: '',
     live: '',
-    imageAlt: '',
-    visual: 'data'
+    repo: '',
+    alt: ''
   }
 ];
 
-const capabilities = [
-  { number: '01', title: 'Data foundations', text: 'Querying, preparing and validating data so it is ready to be understood and used.', tools: 'SQL · MYSQL · EXCEL' },
-  { number: '02', title: 'Programming', text: 'Building practical software and learning to structure code that is clear and maintainable.', tools: 'PYTHON · C++ · PHP' },
-  { number: '03', title: 'Analysis & communication', text: 'Using statistics and visualisation to explore patterns and explain findings clearly.', tools: 'PANDAS · NUMPY · MATPLOTLIB' }
+const skills = [
+  { number: '01', name: 'Data foundations', detail: 'Querying, preparing and validating data before it reaches analysis or a product.', tools: 'SQL / MYSQL / EXCEL' },
+  { number: '02', name: 'Programming', detail: 'Building practical software and strengthening the fundamentals behind reliable code.', tools: 'PYTHON / C++ / PHP' },
+  { number: '03', name: 'Analysis', detail: 'Exploring patterns with statistics and communicating what the data can actually tell us.', tools: 'PANDAS / NUMPY / MATPLOTLIB' }
 ];
 
-function DataWorkflow() {
+function PipelineArtwork() {
   return (
-    <div className="workflow-art" aria-label="Illustration of a data workflow from source to useful insight">
-      <div className="workflow-head">
-        <span>DATA WORKFLOW</span>
-        <span className="workflow-live"><i /> SYSTEMS THINKING</span>
-      </div>
-      <div className="workflow-graphic">
-        <svg className="workflow-lines" viewBox="0 0 520 310" role="img" aria-label="Data flows through collection, transformation and insight">
-          <path d="M92 91 H207 V155 H307 V91 H420" />
-          <path d="M92 220 H207 V155 H307 V220 H420" />
-          <path d="M207 155 H307" />
-          <circle cx="207" cy="155" r="4" />
-          <circle cx="307" cy="155" r="4" />
+    <div className="pipeline-art" aria-label="Data pipeline illustration: collect, shape, deliver">
+      <div className="art-topline"><span>FIELD NOTE / 001</span><span>DATA IN MOTION</span></div>
+      <div className="pipeline-canvas">
+        <svg viewBox="0 0 600 380" className="pipeline-svg" role="img" aria-label="Connected stages of a data workflow">
+          <path d="M80 108 H225 V190 H375 V108 H520" />
+          <path d="M80 270 H225 V190 H375 V270 H520" />
+          <path d="M225 190 H375" />
+          <circle cx="225" cy="190" r="7" />
+          <circle cx="375" cy="190" r="7" />
+          <path className="route-dash" d="M80 108 H225 V190 H375 V108 H520" />
         </svg>
-        <div className="flow-node flow-source">
-          <span className="node-index">01</span>
-          <div className="source-glyph"><i /><i /><i /></div>
-          <strong>Source</strong>
-          <small>Raw information</small>
-        </div>
-        <div className="flow-node flow-transform">
-          <span className="node-index">02</span>
-          <div className="transform-glyph"><i /><i /><i /><i /></div>
-          <strong>Transform</strong>
-          <small>Clean · structure</small>
-        </div>
-        <div className="flow-node flow-insight">
-          <span className="node-index">03</span>
-          <div className="insight-glyph"><i /><i /><i /><i /></div>
-          <strong>Insight</strong>
-          <small>Useful decisions</small>
-        </div>
+        <div className="pipeline-label label-source"><span>01</span><b>Collect</b><small>Raw records</small><div className="mini-records"><i /><i /><i /><i /></div></div>
+        <div className="pipeline-label label-shape"><span>02</span><b>Shape</b><small>Clean + structure</small><div className="mini-bars"><i /><i /><i /><i /><i /></div></div>
+        <div className="pipeline-label label-deliver"><span>03</span><b>Deliver</b><small>Useful output</small><div className="mini-chart"><i /><i /><i /><i /></div></div>
+        <div className="art-side-note">FROM INFORMATION<br />TO SOMETHING USEFUL</div>
       </div>
-      <div className="workflow-foot">
-        <span>COLLECT WITH CARE</span>
-        <span>MAKE IT USEFUL</span>
-      </div>
+      <div className="art-bottomline"><span>OBSERVE</span><span>TRANSFORM</span><span>MAKE IT COUNT</span></div>
+      <div className="art-stamp">BM<br /><span>DS / 26</span></div>
     </div>
   );
 }
 
-function RevenueVisual() {
+function RevenuePreview() {
   return (
-    <div className="revenue-visual" aria-label="Illustration of a SQL to spreadsheet analysis workflow">
-      <div className="revenue-window-bar"><span>FIELD WORK / DATA PREPARATION</span><span>03</span></div>
-      <div className="revenue-content">
-        <div className="revenue-stage">
-          <span className="revenue-label">01 / EXTRACT</span>
-          <div className="query-lines"><i /><i /><i /><i /><i /></div>
-          <strong>SQL query</strong>
-          <small>Municipal revenue records</small>
+    <div className="revenue-preview" aria-label="Illustration of a SQL to spreadsheet workflow">
+      <div className="revenue-heading"><span>FIELD WORK / DATA PREPARATION</span><span>2026</span></div>
+      <div className="revenue-panels">
+        <div className="revenue-panel">
+          <span className="panel-kicker">01 / EXTRACT</span>
+          <div className="query-sheet"><i /><i /><i /><i /><i /><i /></div>
+          <b>SQL query</b><small>Municipal revenue records</small>
         </div>
-        <div className="revenue-connector">→</div>
-        <div className="revenue-stage">
-          <span className="revenue-label">02 / PREPARE</span>
-          <div className="sheet-grid">
-            {Array.from({ length: 20 }, (_, index) => <i key={index} />)}
-          </div>
-          <strong>Excel workbook</strong>
-          <small>January to August 2026</small>
+        <span className="revenue-arrow">→</span>
+        <div className="revenue-panel">
+          <span className="panel-kicker">02 / PREPARE</span>
+          <div className="spreadsheet">{Array.from({ length: 24 }, (_, i) => <i key={i} />)}</div>
+          <b>Excel workbook</b><small>January — August 2026</small>
         </div>
       </div>
-      <p className="revenue-note">A practical workflow completed during field training at Kinondoni Municipal Council.</p>
+      <div className="revenue-foot">KINONDONI MUNICIPAL COUNCIL <span>ICT DEPARTMENT</span></div>
+    </div>
+  );
+}
+
+function ProjectVisual({ project }) {
+  const [failed, setFailed] = useState(false);
+  if (project.number === '03') return <RevenuePreview />;
+  return (
+    <div className={'project-image-wrap' + (failed ? ' image-failed' : '')}>
+      {!failed && <img src={project.image} alt={project.alt} loading="lazy" onError={() => setFailed(true)} />}
+      {failed && <div className="image-fallback"><span>LIVE PROJECT</span><strong>{project.name}</strong><p>Open the project to see the current interface.</p></div>}
+      <span className="image-corner">{project.number} / PREVIEW</span>
+      {project.live && <a className="image-open" href={project.live} target="_blank" rel="noreferrer" aria-label={'Open ' + project.name}>↗</a>}
     </div>
   );
 }
@@ -119,187 +107,124 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const items = document.querySelectorAll('[data-reveal]');
+    const elements = document.querySelectorAll('[data-reveal]');
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      items.forEach(item => item.classList.add('is-visible'));
+      elements.forEach(element => element.classList.add('visible'));
       return;
     }
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08 });
-    items.forEach(item => observer.observe(item));
+    }, { threshold: 0.12 });
+    elements.forEach(element => observer.observe(element));
     return () => observer.disconnect();
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="site-shell">
+    <div className="portfolio">
       <a className="skip-link" href="#main">Skip to content</a>
-      <header className="site-header">
-        <a className="brand" href="#home" aria-label="Benjamin Mbega, home">
-          <span className="brand-mark">BM<span>.</span></span>
-          <span className="brand-name">BENJAMIN GEORGE MBEGA</span>
-        </a>
-        <button className="menu-toggle" type="button" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}>
-          <span>{menuOpen ? 'CLOSE' : 'MENU'}</span><span className="menu-toggle-lines"><i /><i /></span>
-        </button>
-        <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
-          <a href="#work" onClick={closeMenu}>Work</a>
-          <a href="#approach" onClick={closeMenu}>Approach</a>
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a className="nav-cta" href="#contact" onClick={closeMenu}>Get in touch <span>↗</span></a>
+      <header className="topbar">
+        <a className="wordmark" href="#home" aria-label="Benjamin Mbega home"><span>BM</span><i>.</i></a>
+        <span className="topbar-descriptor">DATA / SOFTWARE / SYSTEMS</span>
+        <button className="mobile-menu" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? 'CLOSE −' : 'MENU +'}</button>
+        <nav className={menuOpen ? 'navigation navigation-open' : 'navigation'} aria-label="Main navigation">
+          <a href="#work" onClick={closeMenu}>Work <span>01</span></a>
+          <a href="#about" onClick={closeMenu}>About <span>02</span></a>
+          <a href="#practice" onClick={closeMenu}>Practice <span>03</span></a>
+          <a className="nav-contact" href="#contact" onClick={closeMenu}>Let’s talk <b>↗</b></a>
         </nav>
       </header>
 
       <main id="main">
-        <section className="hero section-wrap" id="home">
-          <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-line" /> DATA SCIENCE · SOFTWARE · SYSTEMS</p>
-            <h1>Turning data<br />into <em>useful</em><br />things.</h1>
-            <p className="hero-summary">I’m Benjamin, a Data Science student in Tanzania interested in building reliable data workflows and practical software that helps people make better decisions.</p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#work">Explore selected work <span>↘</span></a>
-              <a className="text-action" href="mailto:bentiger255@gmail.com">Contact me <span>↗</span></a>
+        <section className="hero" id="home">
+          <div className="hero-main">
+            <div className="hero-kicker"><span className="live-mark" /> EASTC DATA SCIENCE STUDENT <span className="kicker-year">TANZANIA / 2026</span></div>
+            <h1>MAKE DATA<br />DO <span>MORE.</span></h1>
+            <div className="hero-bottom">
+              <p>I’m Benjamin Mbega. I work at the intersection of data, software and practical problem-solving, with a long-term focus on data engineering.</p>
+              <div className="hero-links"><a className="primary-link" href="#work">EXPLORE MY WORK <span>↘</span></a><a className="underlined-link" href="mailto:bentiger255@gmail.com">CONTACT ME ↗</a></div>
             </div>
-            <div className="hero-meta">
-              <span><i className="availability-dot" /> OPEN TO INTERNSHIPS & COLLABORATION</span>
-              <span>DAR ES SALAAM, TANZANIA</span>
-            </div>
+            <div className="hero-index"><span>01 — INTRODUCTION</span><span>SCROLL TO EXPLORE ↓</span></div>
           </div>
-          <div className="hero-visual" data-reveal>
-            <DataWorkflow />
-            <div className="visual-caption"><span>01 / HOW I THINK</span><span>FROM RAW DATA TO REAL USE</span></div>
+          <div className="hero-art-wrap" data-reveal>
+            <PipelineArtwork />
+            <div className="hero-art-caption"><span>BUILD WITH INTENTION.</span><span>LEARN BY SHIPPING.</span></div>
           </div>
+          <div className="hero-side-label">BENJAMIN GEORGE MBEGA / PORTFOLIO</div>
         </section>
 
-        <section className="intro-band" aria-label="Professional focus">
-          <div className="intro-band-inner">
-            <span className="intro-label">CURRENT DIRECTION</span>
-            <p>Data engineering <i>·</i> analytics <i>·</i> thoughtful software</p>
-            <span className="intro-location">EASTC / 2024–2027</span>
-          </div>
+        <section className="ticker" aria-label="Areas of focus">
+          <div className="ticker-inner"><span>DATA ENGINEERING</span><i>✳</i><span>SOFTWARE DEVELOPMENT</span><i>✳</i><span>ANALYTICS</span><i>✳</i><span>DATA ENGINEERING</span></div>
         </section>
 
-        <section className="work-section section-wrap" id="work">
-          <div className="section-heading" data-reveal>
-            <div>
-              <p className="eyebrow"><span className="eyebrow-line" /> SELECTED WORK / 01</p>
-              <h2>Built around<br /><em>real problems.</em></h2>
-            </div>
-            <p className="section-intro">A small selection of projects and practical experience. I focus on understanding the workflow, building with care, and being clear about what each piece of work does.</p>
+        <section className="work-section section-pad" id="work">
+          <div className="section-head" data-reveal>
+            <div><p className="section-number">01 / SELECTED WORK</p><h2>Work that<br /><em>does something.</em></h2></div>
+            <p className="section-intro">A few real projects and practical assignments. Each one represents a problem, a workflow and something learned along the way.</p>
           </div>
-
-          <div className="project-list">
+          <div className="projects">
             {projects.map(project => (
-              <article className={'project project-' + project.visual} key={project.number} data-reveal>
-                <div className="project-preview">
-                  {project.visual === 'data' ? <RevenueVisual /> : (
-                    <>
-                      <img src={project.image} alt={project.imageAlt} loading="lazy" onError={event => { event.currentTarget.style.display = 'none'; event.currentTarget.parentElement.classList.add('preview-unavailable'); }} />
-                      <div className="preview-fallback"><span>PROJECT PREVIEW</span><strong>{project.name}</strong><small>Open the live project to explore</small></div>
-                    </>
-                  )}
-                  <span className="preview-index">{project.number} / {project.visual === 'data' ? 'FIELD NOTES' : 'PROJECT PREVIEW'}</span>
-                </div>
-                <div className="project-detail">
-                  <div className="project-overline"><span>{project.category}</span><span>{project.number}</span></div>
+              <article className={'project project-' + project.number} key={project.number} data-reveal>
+                <div className="project-visual"><ProjectVisual project={project} /><span className="project-index-large">{project.number}</span></div>
+                <div className="project-copy">
+                  <div className="project-meta"><span>{project.type}</span><span>0{project.number === '03' ? '3' : project.number}</span></div>
                   <h3>{project.name}</h3>
-                  <p className="project-description">{project.description}</p>
-                  <p className="project-contribution"><span>FOCUS</span>{project.contribution}</p>
-                  <div className="project-stack">{project.stack.map(technology => <span key={technology}>{technology}</span>)}</div>
-                  <div className="project-actions">
-                    {project.live && <a href={project.live} target="_blank" rel="noreferrer">View live site <span>↗</span></a>}
-                    {project.repository && <a href={project.repository} target="_blank" rel="noreferrer">Source code <span>↗</span></a>}
-                    {!project.live && !project.repository && <span className="work-note">Completed during practical field training</span>}
+                  <p>{project.description}</p>
+                  <div className="project-role"><span>MY FOCUS</span><b>{project.role}</b></div>
+                  <div className="tech-list">{project.stack.map(technology => <span key={technology}>{technology}</span>)}</div>
+                  <div className="project-links">
+                    {project.live && <a href={project.live} target="_blank" rel="noreferrer">VIEW LIVE <span>↗</span></a>}
+                    {project.repo && <a href={project.repo} target="_blank" rel="noreferrer">SOURCE CODE <span>↗</span></a>}
+                    {!project.live && <span className="field-note">FIELD EXPERIENCE · KINONDONI MC</span>}
                   </div>
                 </div>
               </article>
             ))}
           </div>
-          <div className="all-work-link"><span>MORE EXPERIMENTS & CODE</span><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">Explore my GitHub <span>↗</span></a></div>
+          <div className="github-rail"><span>THE CODE, EXPERIMENTS & THE LEARNING</span><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">MORE ON GITHUB <b>↗</b></a></div>
         </section>
 
-        <section className="approach-section" id="approach">
-          <div className="approach-inner section-wrap">
-            <div className="approach-heading" data-reveal>
-              <p className="eyebrow eyebrow-light"><span className="eyebrow-line" /> WHAT I BRING / 02</p>
-              <h2>Curiosity first.<br /><em>Clarity always.</em></h2>
-              <p>I’m building strong fundamentals in data and software. I value understandable code, careful data handling, and results that can be explained.</p>
-            </div>
-            <div className="capability-list">
-              {capabilities.map(item => (
-                <article className="capability" key={item.number} data-reveal>
-                  <span className="capability-number">{item.number}</span>
-                  <div className="capability-copy"><h3>{item.title}</h3><p>{item.text}</p></div>
-                  <span className="capability-tools">{item.tools}</span>
-                </article>
-              ))}
+        <section className="practice-section" id="practice">
+          <div className="practice-layout section-pad">
+            <div className="practice-intro" data-reveal><p className="section-number section-number-light">02 / HOW I WORK</p><h2>Good work<br />starts with<br /><em>good questions.</em></h2><p>I’m still developing my craft. My approach is to understand the problem, work carefully with the information, and make the result useful to someone.</p></div>
+            <div className="skill-list">
+              {skills.map(skill => <article className="skill-row" key={skill.number} data-reveal><span className="skill-number">{skill.number}</span><div><h3>{skill.name}</h3><p>{skill.detail}</p><span className="skill-tools">{skill.tools}</span></div><span className="skill-cross">↗</span></article>)}
             </div>
           </div>
         </section>
 
-        <section className="about-section section-wrap" id="about">
-          <div className="about-heading" data-reveal>
-            <p className="eyebrow"><span className="eyebrow-line" /> A LITTLE ABOUT ME / 03</p>
-            <h2>Learning to build<br />the <em>whole picture.</em></h2>
-          </div>
-          <div className="about-content" data-reveal>
-            <p className="about-lead">I’m studying for a Bachelor’s degree in Data Science at the Eastern Africa Statistical Training Centre (EASTC), with a long-term goal of becoming a data engineer.</p>
-            <p>My interests sit where data and software meet: understanding how information is collected, how it should be prepared, and how it can support useful products and decisions. I learn by building, documenting what I do, and improving through practical work.</p>
-            <div className="about-details">
-              <div><span>EDUCATION</span><strong>BSc Data Science, EASTC</strong></div>
-              <div><span>BASED IN</span><strong>Dar es Salaam, Tanzania</strong></div>
-              <div><span>CAREER INTEREST</span><strong>Data Engineering & Analytics</strong></div>
-            </div>
-            <a className="text-action" href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">More of my work on GitHub <span>↗</span></a>
+        <section className="about-section section-pad" id="about">
+          <div className="about-left" data-reveal><p className="section-number">03 / THE PERSON</p><h2>Curious by<br />nature. <em>Practical</em><br />by habit.</h2><div className="about-stamp">DAR ES SALAAM<br /><span>TANZANIA / TZ</span></div></div>
+          <div className="about-right" data-reveal>
+            <p className="about-lead">I’m pursuing a Bachelor’s degree in Data Science at the Eastern Africa Statistical Training Centre (EASTC).</p>
+            <p>My interests sit where data and software meet: how information is collected, how it should be prepared, and how it can support useful products and decisions. I learn by building, documenting my work and improving through practical experience.</p>
+            <div className="about-facts"><div><span>EDUCATION</span><b>BSc Data Science / EASTC</b></div><div><span>CAREER DIRECTION</span><b>Data Engineering</b></div><div><span>LOCATION</span><b>Dar es Salaam, Tanzania</b></div></div>
+            <a className="underlined-link about-github" href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">FOLLOW THE WORK ON GITHUB ↗</a>
           </div>
         </section>
 
-        <section className="experience-section">
-          <div className="experience-inner section-wrap">
-            <div className="experience-heading" data-reveal>
-              <p className="eyebrow eyebrow-light"><span className="eyebrow-line" /> EDUCATION & PRACTICE / 04</p>
-              <h2>Learning by<br /><em>doing the work.</em></h2>
-            </div>
-            <div className="experience-list">
-              <article className="experience-item" data-reveal>
-                <span className="experience-date">2024 — 2027</span>
-                <div><p className="experience-type">EDUCATION</p><h3>Bachelor’s Degree in Data Science</h3><p className="experience-place">Eastern Africa Statistical Training Centre (EASTC)</p><p>Developing foundations in statistics, programming, data management, data mining and analytical methods.</p></div>
-              </article>
-              <article className="experience-item" data-reveal>
-                <span className="experience-date">AUG — SEP 2026</span>
-                <div><p className="experience-type">FIELD PRACTICAL TRAINING</p><h3>Kinondoni Municipal Council</h3><p className="experience-place">ICT Department · Dar es Salaam</p><p>Updated National Housing Addressing records in the NAPA system, including house numbers, street names, household addresses and GPS coordinates. Also used SQL to extract municipal revenue records for analysis in Excel.</p></div>
-              </article>
-            </div>
+        <section className="experience-section section-pad">
+          <div className="experience-title" data-reveal><p className="section-number section-number-light">04 / EDUCATION & PRACTICE</p><h2>Learning in<br /><em>the real world.</em></h2></div>
+          <div className="timeline">
+            <article className="timeline-item" data-reveal><span className="timeline-date">2024 — 2027</span><div><span className="timeline-type">EDUCATION</span><h3>Bachelor’s Degree in Data Science</h3><p className="timeline-place">Eastern Africa Statistical Training Centre (EASTC)</p><p>Developing foundations in statistics, programming, data management, data mining and analytical methods.</p></div></article>
+            <article className="timeline-item" data-reveal><span className="timeline-date">AUG — SEP 2026</span><div><span className="timeline-type">FIELD PRACTICAL TRAINING</span><h3>Kinondoni Municipal Council</h3><p className="timeline-place">ICT Department · Dar es Salaam</p><p>Updated National Housing Addressing records in the NAPA system, including house numbers, street names, household addresses and GPS coordinates. Also used SQL to extract municipal revenue records for analysis in Excel.</p></div></article>
           </div>
         </section>
 
-        <section className="contact-section section-wrap" id="contact">
-          <div className="contact-topline"><span>HAVE A PROJECT OR OPPORTUNITY?</span><span>05 / CONTACT</span></div>
-          <div className="contact-main">
-            <h2>Let’s make<br /><em>something useful.</em></h2>
-            <div className="contact-copy">
-              <p>I’m open to internships, collaboration and opportunities to learn from people working with data and technology.</p>
-              <a className="button button-light" href="mailto:bentiger255@gmail.com?subject=Portfolio%20enquiry">Start a conversation <span>↗</span></a>
-              <div className="social-links"><a href="mailto:bentiger255@gmail.com">EMAIL ↗</a><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GITHUB ↗</a></div>
-            </div>
-          </div>
-          <div className="contact-footer"><span>BENJAMIN GEORGE MBEGA</span><span>DAR ES SALAAM, TANZANIA</span><a href="#home">BACK TO TOP ↑</a></div>
+        <section className="contact-section section-pad" id="contact">
+          <div className="contact-top"><span>HAVE AN OPPORTUNITY OR A GOOD PROBLEM?</span><span>05 / CONTACT</span></div>
+          <div className="contact-main"><div><p className="section-number">LET’S CONNECT</p><h2>Let’s build<br /><em>something useful.</em></h2></div><div className="contact-copy"><p>I’m open to internships, collaboration and opportunities to learn from people working with data and technology.</p><a className="contact-button" href="mailto:bentiger255@gmail.com?subject=Portfolio%20enquiry">SEND ME A MESSAGE <span>↗</span></a><div className="social-row"><a href="mailto:bentiger255@gmail.com">EMAIL ↗</a><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div></div></div>
+          <div className="contact-bottom"><span>BENJAMIN GEORGE MBEGA</span><span>DAR ES SALAAM, TANZANIA</span><a href="#home">BACK TO TOP ↑</a></div>
         </section>
       </main>
 
-      <footer className="site-footer">
-        <a className="footer-brand" href="#home">BM<span>.</span></a>
-        <span className="footer-note">DATA · SOFTWARE · PRACTICAL THINKING</span>
-        <div className="footer-links"><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GitHub</a></div>
-        <span className="copyright">© {new Date().getFullYear()} Benjamin Mbega</span>
-      </footer>
+      <footer className="footer"><a className="footer-mark" href="#home">BM<i>.</i></a><span className="footer-motto">DATA / SOFTWARE / PRACTICAL THINKING</span><div className="footer-nav"><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GitHub</a></div><span className="footer-copy">© {new Date().getFullYear()} Benjamin Mbega</span></footer>
     </div>
   );
 }
