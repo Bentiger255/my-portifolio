@@ -91,14 +91,43 @@ function RevenuePreview() {
 }
 
 function ProjectVisual({ project }: { project: (typeof projects)[number] }) {
-  const [failed, setFailed] = useState(false);
   if (project.number === '03') return <RevenuePreview />;
+  if (project.number === '01') return (
+    <div className="project-svg-frame loan-visual">
+      <div className="visual-ui-top"><span>SMT / APPLICATION FLOW</span><span>01 — 03</span></div>
+      <svg className="project-art-svg loan-svg" viewBox="0 0 620 360" role="img" aria-label="Illustration of a loan application moving through review">
+        <rect x="55" y="38" width="250" height="285" rx="3" fill="#fffaf0" stroke="#d4cbbc"/>
+        <rect x="79" y="62" width="90" height="8" rx="2" fill="#0f5c53"/><rect x="79" y="83" width="180" height="4" rx="2" fill="#c9c4b8"/><rect x="79" y="94" width="150" height="4" rx="2" fill="#c9c4b8"/>
+        <text x="79" y="133" fill="#242923" fontSize="15" fontWeight="700">Application details</text>
+        <rect x="79" y="151" width="201" height="39" fill="#f2eee4" stroke="#d4cbbc"/><rect x="91" y="163" width="70" height="4" fill="#aaa99e"/><rect x="91" y="173" width="120" height="4" fill="#242923"/>
+        <rect x="79" y="201" width="201" height="39" fill="#f2eee4" stroke="#d4cbbc"/><rect x="91" y="213" width="70" height="4" fill="#aaa99e"/><rect x="91" y="223" width="95" height="4" fill="#242923"/>
+        <rect x="79" y="256" width="120" height="27" rx="2" fill="#0f5c53"/><text x="94" y="273" fill="#fffaf0" fontSize="9" fontWeight="600">SUBMIT DETAILS</text>
+        <path className="loan-route" d="M315 176 C355 176 353 104 393 104" fill="none" stroke="#ef784a" strokeWidth="2.5" strokeDasharray="5 7"/><circle className="loan-route-dot" cx="352" cy="150" r="5" fill="#ef784a"/>
+        <rect x="397" y="57" width="174" height="94" rx="3" fill="#0f5c53"/><circle cx="422" cy="83" r="8" fill="#ef784a"/><path d="M418 83 l3 3 6 -7" fill="none" stroke="#202923" strokeWidth="1.8"/><text x="439" y="86" fill="#fffaf0" fontSize="11" fontWeight="700">Received</text><text x="418" y="111" fill="#d6e3dc" fontSize="9">Application saved</text><rect x="418" y="124" width="125" height="3" fill="#537b70"/>
+        <rect x="397" y="181" width="174" height="94" rx="3" fill="#ef784a"/><circle cx="422" cy="207" r="8" fill="#202923"/><path d="M418 207 h8 M422 203 v8" stroke="#ef784a" strokeWidth="1.5"/><text x="439" y="210" fill="#242923" fontSize="11" fontWeight="700">Review</text><text x="418" y="235" fill="#4c463b" fontSize="9">Admin workflow</text><rect x="418" y="248" width="125" height="3" fill="#d65d36"/>
+        <text x="55" y="345" fill="#6d6c61" fontSize="9" letterSpacing="1.5">FROM FORM SUBMISSION TO REVIEW</text>
+      </svg>
+      <div className="visual-ui-bottom"><span>PUBLIC EXPERIENCE</span><span>ADMIN WORKFLOW</span></div>
+    </div>
+  );
   return (
-    <div className={'project-image-wrap' + (failed ? ' image-failed' : '')}>
-      {!failed && <img src={project.image} alt={project.alt} loading="lazy" onError={() => setFailed(true)} />}
-      {failed && <div className="image-fallback"><span>LIVE PROJECT</span><strong>{project.name}</strong><p>Open the project to see the current interface.</p></div>}
-      <span className="image-corner">{project.number} / PREVIEW</span>
-      {project.live && <a className="image-open" href={project.live} target="_blank" rel="noreferrer" aria-label={'Open ' + project.name}>↗</a>}
+    <div className="project-svg-frame qr-visual">
+      <div className="visual-ui-top"><span>TIGER QR STUDIO / WORKSPACE</span><span>02 — CREATE</span></div>
+      <svg className="project-art-svg qr-svg" viewBox="0 0 620 360" role="img" aria-label="Illustration of a QR code creation workspace">
+        <rect x="34" y="32" width="552" height="292" rx="3" fill="#f8f5ec" stroke="#d2cec2"/><rect x="34" y="32" width="552" height="37" fill="#202923"/>
+        <circle cx="52" cy="50" r="4" fill="#ef784a"/><circle cx="66" cy="50" r="4" fill="#f4bd50"/><circle cx="80" cy="50" r="4" fill="#f8f5ec"/><text x="102" y="54" fill="#f8f5ec" fontSize="10" fontWeight="600">TIGER QR STUDIO</text>
+        <rect x="52" y="88" width="155" height="216" fill="#ece8dc"/><text x="68" y="111" fill="#202923" fontSize="11" fontWeight="700">Create a QR code</text><text x="68" y="132" fill="#77766d" fontSize="8">Choose your content</text>
+        <rect x="68" y="145" width="121" height="30" fill="#f8f5ec" stroke="#cbc7bb"/><text x="79" y="163" fill="#77766d" fontSize="9">Website URL</text><rect x="68" y="185" width="121" height="30" fill="#f8f5ec" stroke="#cbc7bb"/><text x="79" y="203" fill="#77766d" fontSize="9">https://example...</text>
+        <rect x="68" y="229" width="121" height="28" rx="2" fill="#0f5c53"/><text x="83" y="247" fill="#fffaf0" fontSize="9" fontWeight="600">GENERATE QR</text>
+        <rect x="229" y="88" width="338" height="216" fill="#e5e1d5"/><text x="248" y="111" fill="#77766d" fontSize="8" letterSpacing="1.2">LIVE PREVIEW</text>
+        <rect x="346" y="124" width="115" height="115" fill="#fffaf0" stroke="#cbc7bb"/>
+        <g transform="translate(357 135)" fill="#202923">
+          <rect x="0" y="0" width="29" height="29"/><rect x="5" y="5" width="19" height="19" fill="#fffaf0"/><rect x="10" y="10" width="9" height="9"/><rect x="57" y="0" width="29" height="29"/><rect x="62" y="5" width="19" height="19" fill="#fffaf0"/><rect x="67" y="10" width="9" height="9"/><rect x="0" y="57" width="29" height="29"/><rect x="5" y="62" width="19" height="19" fill="#fffaf0"/><rect x="10" y="67" width="9" height="9"/><rect x="36" y="0" width="7" height="7"/><rect x="43" y="14" width="7" height="7"/><rect x="36" y="29" width="7" height="7"/><rect x="50" y="36" width="7" height="7"/><rect x="36" y="50" width="7" height="7"/><rect x="50" y="57" width="7" height="7"/><rect x="36" y="72" width="7" height="7"/><rect x="57" y="43" width="7" height="7"/><rect x="72" y="36" width="7" height="7"/><rect x="64" y="72" width="7" height="7"/><rect x="78" y="57" width="7" height="7"/>
+        </g>
+        <rect className="qr-scan-line" x="346" y="124" width="115" height="2" fill="#ef784a"/><rect x="324" y="254" width="159" height="24" rx="2" fill="#ef784a"/><text x="356" y="269" fill="#202923" fontSize="9" fontWeight="700">DOWNLOAD CODE ↗</text>
+        <text x="52" y="345" fill="#6d6c61" fontSize="9" letterSpacing="1.5">CREATE / PREVIEW / ORGANISE</text>
+      </svg>
+      <div className="visual-ui-bottom"><span>CODE CREATION</span><span>PERSONAL LIBRARY</span></div>
     </div>
   );
 }
