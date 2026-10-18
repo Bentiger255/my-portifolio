@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f3f2ec"/><rect x="730" width="470" height="630" fill="#e7ebe3"/><g stroke="#c6d2cd" stroke-width="1"><path d="M730 50H1200M730 100H1200M730 150H1200M730 200H1200M730 250H1200M730 300H1200M730 350H1200M730 400H1200M730 450H1200M730 500H1200M730 550H1200M780 0V630M830 0V630M880 0V630M930 0V630M980 0V630M1030 0V630M1080 0V630M1130 0V630M1180 0V630"/></g><text x="88" y="110" font-family="Arial,sans-serif" font-size="18" letter-spacing="5" fill="#276b5b">DATA SCIENCE · MACHINE LEARNING</text><text x="88" y="255" font-family="Georgia,serif" font-size="76" fill="#192622">Benjamin George</text><text x="88" y="345" font-family="Georgia,serif" font-size="76" fill="#276b5b">Mbega.</text><text x="88" y="420" font-family="Arial,sans-serif" font-size="25" fill="#68746d">Making data useful in the real world.</text><path d="M790 445 C850 420 880 345 940 360 S1040 270 1085 280 S1130 180 1170 135" fill="none" stroke="#276b5b" stroke-width="5"/><g fill="#276b5b"><circle cx="850" cy="410" r="7"/><circle cx="940" cy="360" r="7"/><circle cx="1040" cy="290" r="7"/><circle cx="1130" cy="180" r="7"/></g><text x="88" y="560" font-family="Arial,sans-serif" font-size="18" fill="#68746d">PORTFOLIO · DAR ES SALAAM, TANZANIA</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f1e9"/>
+  <rect x="770" width="430" height="630" fill="#dce4d8"/>
+  <path d="M770 105H1200M770 210H1200M770 315H1200M770 420H1200M770 525H1200M855 0V630M940 0V630M1025 0V630M1110 0V630" stroke="#c1cfc1" stroke-width="1"/>
+  <text x="76" y="94" font-family="Arial,sans-serif" font-size="17" letter-spacing="4" fill="#667269">DATA SCIENCE · SOFTWARE · SYSTEMS</text>
+  <text x="72" y="245" font-family="Arial,sans-serif" font-weight="700" font-size="77" letter-spacing="-4" fill="#1b2c25">Benjamin George</text>
+  <text x="72" y="333" font-family="Arial,sans-serif" font-weight="700" font-size="77" letter-spacing="-4" fill="#b66a4d">Mbega.</text>
+  <text x="77" y="400" font-family="Arial,sans-serif" font-size="25" fill="#5c6960">Turning data into useful things.</text>
+  <text x="77" y="552" font-family="monospace" font-size="16" letter-spacing="2" fill="#667269">DAR ES SALAAM, TANZANIA</text>
+  <g stroke="#203b30" stroke-width="2" fill="#f3f1e9">
+    <path d="M830 200H930V315H1030V200H1135" fill="none" stroke="#91a894" stroke-width="3"/>
+    <rect x="795" y="160" width="110" height="90" rx="0"/>
+    <rect x="975" y="275" width="110" height="90" rx="0" fill="#203b30"/>
+    <rect x="1085" y="160" width="100" height="90" rx="0"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+    <text x="850" y="205" fill="#203b30">01</text><text x="1030" y="320" fill="#f3f1e9">02</text><text x="1135" y="205" fill="#203b30">03</text>
+  </g>
+  <g fill="#b66a4d"><circle cx="930" cy="315" r="5"/><circle cx="1030" cy="315" r="5"/></g>
+  <g font-family="Arial,sans-serif" font-size="15" fill="#40574a"><text x="850" y="232" text-anchor="middle">SOURCE</text><text x="1030" y="347" text-anchor="middle" fill="#f3f1e9">TRANSFORM</text><text x="1135" y="232" text-anchor="middle">INSIGHT</text></g>
+</svg>
