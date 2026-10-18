@@ -1,13 +1,13 @@
-# Benjamin Mbega Portfolio
+# Benjamin George Mbega | Portfolio
 
-Source code for the personal portfolio of Benjamin George Mbega, Data Science student based in Dar es Salaam, Tanzania.
+Personal portfolio for Benjamin George Mbega, a Data Science student based in Dar es Salaam, Tanzania, building practical software and developing a focus on data engineering and analytics.
 
-## Tech stack
+## Built with
 
 - React and TypeScript
 - Vite
-- Tailwind CSS
-- Lucide React
+- CSS
+- Google Fonts with system fallbacks
 
 ## Run locally
 
@@ -16,13 +16,18 @@ npm install
 npm run dev
 ```
 
-Build for production with `npm run build`.
+Create a production build with:
 
-## Pages
+```bash
+npm run build
+```
 
-- Portfolio homepage
-- Privacy notice (`/privacy.html`)
-- Terms of use (`/terms.html`)
-- Custom 404 page
+## Site sections
 
-The deployed preview is available at https://benjamin-mbega-portfolio-5b7evp.v2.appdeploy.ai/.
+- Selected software projects and practical data work
+- Current technical focus
+- Education and field practical training
+- Contact links
+- Privacy notice and terms of use
+
+Live site: https://benjaminmbega.netlify.app/
