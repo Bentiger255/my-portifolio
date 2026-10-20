@@ -321,3 +321,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--coral); outline
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
 }
+
+
+/* Compact site notes, linked from the footer. */
+.legal-notes { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 7vw, 90px); padding-top: 36px; padding-bottom: 54px; border-top: 1px solid var(--line); }
+.legal-notes article { scroll-margin-top: 30px; }
+.legal-notes h2 { margin: 12px 0 10px; font: 700 23px 'Manrope', sans-serif; letter-spacing: -.045em; }
+.legal-notes article > p:last-child { max-width: 560px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.9; }
+.legal-notes article > p:last-child a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 700px) { .legal-notes { grid-template-columns: 1fr; gap: 30px; padding-top: 30px; padding-bottom: 36px; } }
