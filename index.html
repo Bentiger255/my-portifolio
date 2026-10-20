@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Benjamin George Mbega | Data Analyst & Python Developer</title>
+<title>Benjamin George Mbega | Data Science & Analytics Portfolio</title>
+<meta name="description" content="Portfolio of Benjamin George Mbega, a Data Science student building practical data analysis, visualization, machine learning and web applications.">
+<meta name="theme-color" content="#070816">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Outfit:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark;--bg:#070816;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.12);--ink:#f4f5ff;--mut:#a3a8c8;--v:#7c5cff;--c:#22d3ee;--p:#ff4ecd;--y:#ffd166;
@@ -121,6 +123,81 @@ footer{padding:2rem 0 3rem;text-align:center;color:var(--mut);font-size:.9rem}
 .rv{opacity:0;transform:translateY(30px) scale(.98);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.9,.2,1);transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}h1 em{transform:none}.rv{opacity:1;transform:none}.bars i{height:var(--h)}.dash path{stroke-dashoffset:0}.bar i{width:var(--w)}html{scroll-behavior:auto}}
+
+/* Portfolio refinement: readable layout, stable cards, responsive chart */
+:root{--mut:#b3b8d3}
+.wrap{width:min(1160px,calc(100% - 3rem))}
+section{padding:clamp(4rem,7vw,6.5rem) 0}
+#hero{padding-top:9rem}
+.hg{grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(2rem,5vw,4.5rem)}
+.hg>div{min-width:0}
+h1{font-size:clamp(3.15rem,7.5vw,6.25rem);line-height:.99}
+.hp{font-size:clamp(1rem,1.5vw,1.12rem);line-height:1.8;max-width:52ch}
+.lead{line-height:1.8}
+.grid{min-width:0;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.grid>*{min-width:0}
+.g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{min-width:0;padding:clamp(1.15rem,2.2vw,1.7rem);overflow-wrap:anywhere}
+.card h3{line-height:1.25;overflow-wrap:anywhere}
+.chips{gap:.45rem}
+.chip{max-width:100%;white-space:normal;overflow-wrap:anywhere;line-height:1.4}
+.proj .ph{height:clamp(115px,16vw,160px);display:flex;align-items:flex-end;justify-content:space-between;padding:1.1rem}
+.project-mark{font:800 clamp(2rem,4vw,3rem) var(--mono);letter-spacing:-.07em;color:rgba(255,255,255,.95)}
+.project-type{font:600 .68rem var(--mono);letter-spacing:.12em;color:rgba(255,255,255,.9);text-align:right}
+.project-links{position:relative;display:flex;flex-wrap:wrap;gap:.7rem 1.1rem;margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--line)}
+.project-links a{font-size:.9rem;font-weight:600;color:#d9d5ff}
+.project-links a:hover{color:var(--c)}
+.chart-card{padding:clamp(1.1rem,2.3vw,1.65rem);animation:none;align-self:center;min-width:0}
+.chart-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.chart-head h2{font-size:clamp(1.35rem,2.5vw,1.9rem);margin:.3rem 0 .35rem;letter-spacing:-.03em}
+.chart-head p{color:var(--mut);font-size:.82rem;line-height:1.5;margin:0}
+.chart-kicker{font:600 .65rem var(--mono);letter-spacing:.14em;color:#9d9aff}
+.chart-live{display:inline-flex;align-items:center;gap:.45rem;border:1px solid var(--line);border-radius:999px;padding:.4rem .65rem;font-size:.7rem;white-space:nowrap;color:#d7d8ee}
+.chart-live i,.chart-legend i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#5eead4}
+.chart-live i{box-shadow:0 0 0 4px rgba(94,234,212,.1)}
+.chart-legend{display:flex;justify-content:space-between;gap:.6rem;align-items:center;margin-top:1.4rem;font-size:.75rem;color:#d7d8ee}
+.chart-legend>span:first-child{display:flex;align-items:center;gap:.5rem}
+.chart-legend i{width:17px;height:3px;border-radius:3px}
+.chart-note{color:var(--mut);font-size:.7rem}
+.chart-plot{width:100%;margin-top:.6rem}
+#trendChart{display:block;width:100%;height:auto;overflow:visible}
+.chart-grid line{stroke:rgba(255,255,255,.1);stroke-width:1;stroke-dasharray:3 5}
+.chart-ylabels,.chart-xlabels{fill:#9fa5c5;font:11px var(--mono)}
+.chart-ylabels text{text-anchor:end}
+.chart-xlabels text{text-anchor:middle}
+.chart-area{fill:url(#chartFill);opacity:.16}
+.chart-line{fill:none;stroke:#63e8dd;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(99,232,221,.3));stroke-dasharray:1000;stroke-dashoffset:1000;animation:chart-draw 2s .25s cubic-bezier(.2,.8,.2,1) forwards}
+.chart-point{fill:#0c102b;stroke:#63e8dd;stroke-width:2.5;cursor:pointer;transition:r .18s ease,fill .18s ease}
+.chart-point:hover,.chart-point:focus{r:7;fill:#ff4ecd;outline:none}
+@keyframes chart-draw{to{stroke-dashoffset:0}}
+.chart-foot{display:flex;justify-content:space-between;gap:.6rem;padding-top:.75rem;border-top:1px solid var(--line);color:var(--mut);font-size:.7rem}
+.chart-tooltip{min-height:2.3rem;margin-top:.65rem;padding:.55rem .7rem;border-radius:10px;background:rgba(255,255,255,.045);color:#d9dcf1;font: .75rem var(--mono)}
+@media(max-width:900px){.hg{grid-template-columns:1fr;max-width:760px}.chart-card{max-width:680px;width:100%;justify-self:start}.dash{animation:none}#hero{padding-top:8rem}.about{grid-template-columns:.65fr 1.35fr;gap:2rem}}
+@media(max-width:640px){
+ .wrap{width:calc(100% - 2rem)}
+ section{padding:3.8rem 0}
+ nav .wrap{height:60px;padding:0 .8rem;margin-top:5px}
+ .logo{font-size:1rem}.logo b{width:32px;height:32px}
+ .hg{gap:2rem}
+ h1{font-size:clamp(3rem,14vw,4.7rem)}
+ .role{font-size:1rem}
+ .hp{font-size:1rem}
+ .cta .btn{padding:.78rem 1rem}
+ .g4,.g2,.grid{grid-template-columns:minmax(0,1fr)}
+ .about{grid-template-columns:minmax(0,1fr);gap:2rem}
+ .av{width:145px}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .card{padding:1.2rem;border-radius:19px}
+ .proj .ph{height:125px}
+ .chart-head{gap:.5rem}.chart-live{font-size:.65rem;padding:.35rem .5rem}
+ .chart-head p{font-size:.76rem}
+ .chart-foot{font-size:.65rem}
+ .chart-ylabels,.chart-xlabels{font-size:10px}
+ .mq span{font-size:1.05rem}
+}
+@media(prefers-reduced-motion:reduce){.chart-line{animation:none;stroke-dashoffset:0}.chart-point{transition:none}}
+
 </style>
 </head>
 <body>
@@ -137,14 +214,31 @@ footer{padding:2rem 0 3rem;text-align:center;color:var(--mut);font-size:.9rem}
       <div class="tag"><i></i>Open to freelance and remote work</div>
       <h1 aria-label="Benjamin George Mbega"><span><em>Benjamin</em></span><span><em class="grad">George</em></span><span><em>Mbega</em></span></h1>
       <div class="role">&gt; <span id="typed"></span><span class="caret"></span></div>
-      <p class="hp">Data Science student in Dar es Salaam. I turn messy data into clear insights and build web apps people can use.</p>
+      <p class="hp">I’m a Data Science student at EASTC, focused on turning raw data into clear insights and useful digital products. I work across data analysis, visualization, machine learning and web development using Python, SQL and statistical thinking.</p>
       <div class="cta"><a href="#projects" class="btn pr">View my projects</a><a href="#contact" class="btn">Get in touch</a></div>
     </div>
-    <div class="glass dash" aria-hidden="true">
-      <div class="dh"><s></s><s></s><s></s><span>insights.py</span></div>
-      <div class="bars"><i style="--i:0;--h:45%"></i><i style="--i:1;--h:70%"></i><i style="--i:2;--h:55%"></i><i style="--i:3;--h:90%"></i><i style="--i:4;--h:65%"></i><i style="--i:5;--h:100%"></i><i style="--i:6;--h:78%"></i><i style="--i:7;--h:92%"></i></div>
-      <svg viewBox="0 0 300 70" preserveAspectRatio="none"><path d="M0 55 C40 50 50 20 90 30 S140 60 180 35 S250 5 300 12"/></svg>
-      <small>Illustration of a data dashboard</small>
+    <div class="glass dash chart-card">
+      <div class="chart-head">
+        <div><span class="chart-kicker">DATA VISUALIZATION</span><h2>Trend explorer</h2><p>Example monthly index · illustrative data</p></div>
+        <span class="chart-live"><i></i> Animated</span>
+      </div>
+      <div class="chart-legend"><span><i></i> Observed index</span><span class="chart-note">Demo dataset</span></div>
+      <div class="chart-plot" role="img" aria-label="Animated line chart showing an illustrative monthly index trending upward with some variation">
+        <svg id="trendChart" viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <g class="chart-grid">
+            <line x1="54" y1="36" x2="576" y2="36"/><line x1="54" y1="82" x2="576" y2="82"/>
+            <line x1="54" y1="128" x2="576" y2="128"/><line x1="54" y1="174" x2="576" y2="174"/>
+            <line x1="54" y1="220" x2="576" y2="220"/>
+          </g>
+          <g class="chart-ylabels"><text x="42" y="40">140</text><text x="42" y="86">110</text><text x="42" y="132">80</text><text x="42" y="178">50</text><text x="42" y="224">20</text></g>
+          <path id="trendArea" class="chart-area" d=""/>
+          <path id="trendLine" class="chart-line" d=""/>
+          <g id="trendPoints"></g>
+          <g class="chart-xlabels"><text x="54" y="254">Jan</text><text x="101" y="254">Feb</text><text x="148" y="254">Mar</text><text x="196" y="254">Apr</text><text x="243" y="254">May</text><text x="291" y="254">Jun</text><text x="338" y="254">Jul</text><text x="386" y="254">Aug</text><text x="433" y="254">Sep</text><text x="481" y="254">Oct</text><text x="528" y="254">Nov</text><text x="576" y="254">Dec</text></g>
+        </svg>
+      </div>
+      <div class="chart-foot"><span>12 monthly observations</span><span>Hover or tap a point</span></div>
+      <div class="chart-tooltip" id="chartTooltip" aria-live="polite">Select a point to inspect its value.</div>
     </div>
   </div>
 </header>
@@ -173,10 +267,10 @@ footer{padding:2rem 0 3rem;text-align:center;color:var(--mut);font-size:.9rem}
   <h2 class="rv">Technical <span class="grad">skills</span></h2>
   <p class="lead rv">The tools I use to analyse data and build software.</p>
   <div class="grid g4">
-    <div class="card rv"><h3>💻 Programming</h3><div class="chips"><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">SQL</span><span class="chip">R</span><span class="chip">HTML & CSS</span></div></div>
-    <div class="card rv" style="--d:.08s"><h3>📊 Data science</h3><div class="chips"><span class="chip">Data analysis</span><span class="chip">Data cleaning</span><span class="chip">Preprocessing</span><span class="chip">Machine learning</span><span class="chip">Statistics</span><span class="chip">Visualization</span></div></div>
-    <div class="card rv" style="--d:.16s"><h3>🗄️ Databases</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Supabase</span></div></div>
-    <div class="card rv" style="--d:.24s"><h3>🛠️ Frameworks & tools</h3><div class="chips"><span class="chip">Yii2</span><span class="chip">Tailwind CSS</span><span class="chip">Git & GitHub</span><span class="chip">VS Code</span><span class="chip">Jupyter</span><span class="chip">RStudio</span><span class="chip">Composer</span><span class="chip">XAMPP</span></div></div>
+    <div class="card rv"><h3>Programming</h3><div class="chips"><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">SQL</span><span class="chip">R</span><span class="chip">HTML & CSS</span></div></div>
+    <div class="card rv" style="--d:.08s"><h3>Data science</h3><div class="chips"><span class="chip">Data analysis</span><span class="chip">Data cleaning</span><span class="chip">Preprocessing</span><span class="chip">Machine learning</span><span class="chip">Statistics</span><span class="chip">Visualization</span></div></div>
+    <div class="card rv" style="--d:.16s"><h3>Databases</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Supabase</span></div></div>
+    <div class="card rv" style="--d:.24s"><h3>Frameworks & tools</h3><div class="chips"><span class="chip">Yii2</span><span class="chip">Tailwind CSS</span><span class="chip">Git & GitHub</span><span class="chip">VS Code</span><span class="chip">Jupyter</span><span class="chip">RStudio</span><span class="chip">Composer</span><span class="chip">XAMPP</span></div></div>
   </div>
   <div class="chips rv" style="margin-top:2.2rem"><span class="chip">Analytical thinking</span><span class="chip">Critical thinking</span><span class="chip">Problem solving</span><span class="chip">Attention to detail</span><span class="chip">Communication</span><span class="chip">Teamwork</span><span class="chip">Adaptability</span><span class="chip">Time management</span></div>
 </div></section>
@@ -185,10 +279,10 @@ footer{padding:2rem 0 3rem;text-align:center;color:var(--mut);font-size:.9rem}
   <h2 class="rv">Featured <span class="grad">projects</span></h2>
   <p class="lead rv">Data science and full-stack work, built with Tanzanian users in mind.</p>
   <div class="grid g2">
-    <article class="card proj rv"><div class="ph" style="--a:#16a34a;--b:#22d3ee">🌾</div><h3>Mikopo ya Wakulima Tanzania</h3><p>A web platform for agricultural lending that helps Tanzanian farmers find and apply for loans.</p><div class="chips"><span class="chip">Web app</span><span class="chip">Full-stack</span></div></article>
-    <article class="card proj rv" style="--d:.1s"><div class="ph" style="--a:#7c5cff;--b:#ff4ecd">🕵️</div><h3>Mobile money fraud detection</h3><p>A machine learning project that spots fraudulent transactions in the PaySim mobile money dataset.</p><div class="chips"><span class="chip">Python</span><span class="chip">Machine learning</span><span class="chip">PaySim</span></div></article>
-    <article class="card proj rv"><div class="ph" style="--a:#f59e0b;--b:#ff4ecd">🏫</div><h3>ShuleConnect</h3><p>A school management web app for publishing results and managing fees, built to handle 2,000 users.</p><div class="chips"><span class="chip">Web app</span><span class="chip">Scalability</span></div></article>
-    <article class="card proj rv" style="--d:.1s"><div class="ph" style="--a:#22d3ee;--b:#7c5cff">📦</div><h3>Inventory management system</h3><p>A group project: an inventory management system built with PHP and the Yii2 framework.</p><div class="chips"><span class="chip">PHP</span><span class="chip">Yii2</span><span class="chip">MySQL</span></div></article>
+    <article class="card proj rv"><div class="ph" style="--a:#147d64;--b:#22d3ee"><span class="project-mark">SM</span><span class="project-type">WEB PLATFORM</span></div><h3>Samia Mikopo Tanzania</h3><p>A lending information and application platform designed for Tanzanian users, with an admin workflow for reviewing applications.</p><div class="chips"><span class="chip">Web development</span><span class="chip">Supabase</span><span class="chip">JavaScript</span></div><div class="project-links"><a href="https://samia-mikopo.com" target="_blank" rel="noopener">Live website ↗</a><a href="https://github.com/Bentiger255/samia-mikopo-tanzania" target="_blank" rel="noopener">Source code ↗</a></div></article>
+    <article class="card proj rv" style="--d:.1s"><div class="ph" style="--a:#6654db;--b:#ed6ab5"><span class="project-mark">TQ</span><span class="project-type">UTILITY APP</span></div><h3>Tiger QR Studio</h3><p>A browser-based QR creation project focused on making a practical utility straightforward to use.</p><div class="chips"><span class="chip">Web app</span><span class="chip">UI implementation</span></div><div class="project-links"><a href="https://brilliant-dasik-af7c22.netlify.app" target="_blank" rel="noopener">Live website ↗</a><a href="https://github.com/Bentiger255/tiger-qr-studio" target="_blank" rel="noopener">Source code ↗</a></div></article>
+    <article class="card proj rv"><div class="ph" style="--a:#c37a30;--b:#e6c67d"><span class="project-mark">SQL</span><span class="project-type">FIELD PRACTICAL</span></div><h3>Municipal revenue analysis</h3><p>Practical training with Kinondoni Municipal Council, including SQL extraction of revenue records and preparing data in Excel for analysis.</p><div class="chips"><span class="chip">SQL</span><span class="chip">Excel</span><span class="chip">Data preparation</span></div></article>
+    <article class="card proj rv" style="--d:.1s"><div class="ph" style="--a:#168ca0;--b:#5a75d6"><span class="project-mark">DB</span><span class="project-type">GROUP PROJECT</span></div><h3>Inventory management system</h3><p>A group-built inventory application using PHP and Yii2, combining application logic with database-backed records.</p><div class="chips"><span class="chip">PHP</span><span class="chip">Yii2</span><span class="chip">MySQL</span></div></article>
   </div>
 </div></section>
 
@@ -221,6 +315,30 @@ var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 (function(){var w=['Data Analyst','Python Developer','Data Science Student','Machine Learning Explorer'],el=document.getElementById('typed'),i=0,j=0,del=false;
 if(calm){el.textContent=w[0];return}
 (function t(){var s=w[i];j+=del?-1:1;el.textContent=s.slice(0,j);var d=del?35:75;if(!del&&j===s.length){del=true;d=1600}else if(del&&j===0){del=false;i=(i+1)%w.length;d=350}setTimeout(t,d)})()})();
+
+(function(){
+ var svg=document.getElementById('trendChart'),line=document.getElementById('trendLine'),area=document.getElementById('trendArea'),points=document.getElementById('trendPoints'),tip=document.getElementById('chartTooltip');
+ if(!svg||!line||!area||!points||!tip)return;
+ var vals=[46,61,54,76,70,91,83,104,97,119,110,132];
+ var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+ var min=20,max=140,left=54,right=576,top=36,bottom=220;
+ var coords=vals.map(function(v,i){return {x:left+(right-left)*i/(vals.length-1),y:bottom-(v-min)/(max-min)*(bottom-top),v:v,m:months[i]}});
+ var d=coords.map(function(p,i){return (i?'L':'M')+p.x.toFixed(1)+' '+p.y.toFixed(1)}).join(' ');
+ line.setAttribute('d',d);
+ area.setAttribute('d',d+' L '+right+' '+bottom+' L '+left+' '+bottom+' Z');
+ coords.forEach(function(p,i){
+   var c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+   c.setAttribute('cx',p.x);c.setAttribute('cy',p.y);c.setAttribute('r','4.5');c.setAttribute('class','chart-point');
+   c.setAttribute('tabindex','0');c.setAttribute('role','button');c.setAttribute('aria-label',p.m+' illustrative index '+p.v);
+   function show(){tip.textContent=p.m+' · Index '+p.v+' · Illustrative example data';}
+   c.addEventListener('pointerenter',show);c.addEventListener('focus',show);c.addEventListener('click',show);c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});
+   points.appendChild(c);
+ });
+ var defs=document.createElementNS('http://www.w3.org/2000/svg','defs');
+ defs.innerHTML='<linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#63e8dd"/><stop offset="100%" stop-color="#7c5cff" stop-opacity="0"/></linearGradient>';
+ svg.insertBefore(defs,svg.firstChild);
+})();
+
 function count(el){var n=+el.dataset.n,s=el.dataset.s||'',t0=performance.now();(function f(t){var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+s;if(p<1)requestAnimationFrame(f)})(t0)}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
