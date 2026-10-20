@@ -219,9 +219,21 @@ export default function App() {
           <div className="contact-main"><div data-reveal><p className="section-kicker">LET’S CONNECT</p><h2>Good things<br />start with a <em>hello.</em></h2></div><div className="contact-copy" data-reveal><p>I’m open to internships, collaborative projects and opportunities to learn from people working with data and technology.</p><a className="button button-primary contact-button" href="mailto:bentiger255@gmail.com?subject=Portfolio%20enquiry">Email Benjamin <span>↗</span></a><div className="social-links"><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:bentiger255@gmail.com">Email ↗</a></div></div></div>
           <div className="contact-bottom"><span>BENJAMIN GEORGE MBEGA</span><span>DAR ES SALAAM, TANZANIA</span><a href="#home">BACK TO TOP ↑</a></div>
         </section>
+        <section className="legal-notes section-wrap" aria-label="Privacy and terms">
+          <article id="privacy-notice" data-reveal>
+            <p className="section-kicker">SITE NOTES / 01</p>
+            <h2>Privacy</h2>
+            <p>This portfolio does not currently have an account system, contact form, newsletter signup or first-party analytics tracker. If you email me, your message is handled by the email services used to send and receive it. The hosting provider and third-party resources may process basic technical request information. External websites have their own privacy practices. For questions about information you send me, contact <a href="mailto:bentiger255@gmail.com">bentiger255@gmail.com</a>.</p>
+          </article>
+          <article id="terms-of-use" data-reveal>
+            <p className="section-kicker">SITE NOTES / 02</p>
+            <h2>Terms of use</h2>
+            <p>This portfolio shares personal background, selected projects and learning experience for general information. Project details and external links may change. Do not assume that project code, designs or other materials are licensed for reuse unless a repository or separate licence says so. External sites are operated by their respective owners. Questions can be sent to <a href="mailto:bentiger255@gmail.com">bentiger255@gmail.com</a>.</p>
+          </article>
+        </section>
       </main>
 
-      <footer className="site-footer"><a className="footer-brand" href="#home">b<span>.</span></a><span className="footer-note">Built with curiosity and care.</span><div className="footer-links"><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GitHub</a></div><span className="footer-copy">© {new Date().getFullYear()} Benjamin Mbega</span></footer>
+      <footer className="site-footer"><a className="footer-brand" href="#home">b<span>.</span></a><span className="footer-note">Built with curiosity and care.</span><div className="footer-links"><a href="#privacy-notice">Privacy</a><a href="#terms-of-use">Terms</a><a href="https://github.com/Bentiger255" target="_blank" rel="noreferrer">GitHub</a></div><span className="footer-copy">© {new Date().getFullYear()} Benjamin Mbega</span></footer>
     </div>
   );
 }
